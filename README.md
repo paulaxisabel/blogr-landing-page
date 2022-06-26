@@ -25,8 +25,7 @@ Users should be able to:
 ## Built with
 
 - HTML
-- CSS Flexbox
-- CSS Grid
+- SASS
 - Javascript
 
 ## Author
