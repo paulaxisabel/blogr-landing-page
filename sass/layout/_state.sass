@@ -1,0 +1,49 @@
+.state
+  background: url('../images/bg-pattern-circles.svg'), $gradient-dark
+  background-repeat: no-repeat
+  background-position-y: 125%
+  background-position-x: center
+  border-radius: 0 9rem 0 9rem
+  text-align: center
+  margin-top: 25.4rem
+  padding-top: 21.7rem
+  padding-bottom: 9rem
+  min-height: 44rem
+  position: relative
+  @media screen and (min-width: 992px)
+    background-position-y: 80%
+    background-position-x: -20%
+    text-align: left
+    margin-top: 4.9rem
+    padding: 0
+    min-height: initial
+    height: 40rem
+  & > .container
+    height: 100%
+    @media screen and (min-width: 992px)
+      display: flex
+      align-items: center
+      justify-content: space-between
+  & img
+    @media screen and (max-width: 991px)
+      position: absolute
+      top: -17.8rem
+      left: 50%
+      transform: translateX(-50%)
+      width: 36.5rem
+    @media screen and (min-width: 992px)
+      position: relative
+      top: 2rem
+      left: -2.2em
+  &__description
+    padding: 0 2.2rem
+    @media screen and (min-width: 992px)
+      padding: 1rem 0 0 1.5rem
+      width: 50%
+    & h1, p
+      color: $col-white
+    & h1
+      font-size: 3.7rem
+      line-height: 4.7rem
+      letter-spacing: 0.2px
+      margin-bottom: 2rem

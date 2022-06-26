@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap')
+// Font family
+$font-overpass: 'Overpass', sans-serif
+$font-ubuntu: 'Ubuntu', sans-serif
+
+// Spacing
+$space-max-width: 111rem
+
+// Design elements
+$transition: 200ms ease-in-out
+
+// Colors
+$col-cta-text: hsl(356, 100%, 66%)
+$col-cta-hover-bg: hsl(355, 100%, 74%)
+$col-headings: hsl(208, 49%, 24%)
+
+$col-white: hsl(0, 0%, 100%)
+$col-footer-text: hsl(240, 2%, 79%)
+$col-body-copy: hsl(207, 13%, 34%)
+$col-footer-bg: hsl(240, 10%, 16%)
+$col-dropdown-bg: hsl(228, 24%, 96%)
+$col-dropdown-text: hsl(210, 16%, 40%)
+
+$gradient-light-red: linear-gradient(115deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%))
+$gradient-dark: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%))
+
+// Visibility
+@media screen and (max-width: 767px)
+  .hide-for-mobile
+    display: none
+  
+@media screen and (min-width: 768px)
+  .hide-for-desktop
+    display: none
+
+// Typography
+*
+  font-family: $font-overpass
+
+body
+  font-size: 1.8rem
+  overflow-x: hidden
+  &.noscroll
+    overflow: hidden
+
+h1, h2, h3, h4, p
+  color: $col-headings
+  margin: 0
+
+h1, h2, h3, h4
+  font-weight: 600
+
+h1
+  font-size: 3.4rem
+  line-height: 4.2rem
+  letter-spacing: -0.7px
+  @media screen and (min-width: 768px)
+    font-size: 6.1rem
+    letter-spacing: -0.6px
+    line-height: 6.6rem
+
+h2
+  font-size: 2.6rem
+  letter-spacing: -0.4px
+  @media screen and (min-width: 768px)
+    font-size: 4rem
+    letter-spacing: -1.1px
+h3
+  font-size: 2.7rem
+  font-weight: 600
+  line-height: 3.1rem
+  letter-spacing: 0px
+  @media screen and (min-width: 768px)
+    font-size: 2.8rem
+p
+  font-size: 1.6rem
+  line-height: 2.7rem
+  letter-spacing: 0.1px
+  @media screen and (min-width: 768px)
+    letter-spacing: 0.5px
+    line-height: 2.8rem
+
+main h2
+  text-align: center
+  margin-bottom: 4.1rem
+  @media screen and (min-width: 768px)
+    margin-bottom: 10.5rem
+
+main
+  overflow: hidden
+
+// Reset
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  height: 100%
+
+*, *::before, *::after
+  box-sizing: border-box
+
+body
+  margin: 0
+  overflow-x: hidden
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+input, textarea
+  background: none
+  border: none
+  display: block
+  margin: 0
+  padding: 0
+
+textarea
+  resize: none
+
+label
+  display: block
+
+button
+  border: none
+  cursor: pointer
+  outline: none

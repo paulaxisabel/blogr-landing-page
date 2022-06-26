@@ -1,0 +1,59 @@
+.container
+  padding: 0 2.2rem
+  margin: 0 auto
+  max-width: $space-max-width
+  @media screen and (min-width: 1200px)
+    padding: 0
+
+.cta
+  font-family: $font-ubuntu
+  font-size: 1.5rem
+  font-weight: 700
+  border: 1px solid transparent
+  border-radius: 3rem
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 4.5rem
+  width: 13rem
+  transition: $transition
+  @media screen and (min-width: 768px)
+    height: 4.8rem
+    width: 13.7rem
+  &--white
+    background-color: $col-white
+    color: $col-cta-text
+    &:hover
+      background-color: $col-cta-hover-bg
+      color: $col-white
+  &--sign-up
+    background: $gradient-light-red
+    color: $col-white
+    &:hover
+      opacity: 0.75
+    @media screen and (min-width: 768px)
+      background: $col-white
+      color: $col-cta-text
+      &:hover
+        background-color: $col-cta-hover-bg
+        color: $col-white
+        opacity: 1
+  &--transparent
+    background-color: transparent
+    border: 1px solid $col-white
+    color: $col-white
+    &:hover
+      background-color: $col-white
+      color: $col-cta-text
+
+.arrow
+  background: url('../images/icon-arrow-dark.svg') no-repeat
+  position: absolute
+  top: 1.8rem
+  right: -1.5rem
+  height: 0.6rem
+  width: 1rem
+  transition: 400ms ease-in-out transform
+  @media screen and (min-width: 768px)
+    background: url('../images/icon-arrow-light.svg') no-repeat
+    top: 0.8rem

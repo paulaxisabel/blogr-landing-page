@@ -1,0 +1,209 @@
+.header
+  background: url('../images/bg-pattern-intro.svg'), $gradient-light-red
+  background-repeat: no-repeat
+  background-position: 45% center
+  border-bottom-left-radius: 10rem
+  margin-bottom: 9.7rem
+  height: 57.5rem
+  position: relative
+  z-index: 0
+  @media screen and (min-width: 768px)
+    background-position: 30% center
+    height: 60rem
+    margin-bottom: 15.4rem
+
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 5.5rem
+    @media screen and (max-width: 767px)
+      text-align: center
+    @media screen and (min-width: 768px)
+      padding-top: 6.2rem
+
+  &__logo img
+    @media screen and (max-width: 767px)
+      width: 7.8rem
+    @media screen and (min-width: 768px)
+      margin-right: 6.7rem
+
+  &__links
+    @media screen and (max-width: 767px)
+      background-color: $col-white
+      border-radius: 0.5rem
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+      display: none
+      flex-direction: column
+      padding: 2rem 2.6rem 3rem
+      position: absolute
+      top: 12.1rem
+      left: 50%
+      transform: translateX(-50%)
+      width: calc(100% - 4.4rem)
+      z-index: 99
+    @media screen and (min-width: 768px)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+    & li
+      color: $col-headings
+      font-family: $font-ubuntu
+      font-size: 1.8rem
+      font-weight: 600
+      position: relative
+      &:hover
+        color: $col-body-copy
+      @media screen and (min-width: 768px)
+        font-size: 1.4rem
+        color: $col-white
+      &:not(:last-child)
+        @media screen and (min-width: 768px)
+          margin-right: 3.2rem
+    &.slidein
+      display: flex
+      animation: slide-in 600ms ease-in-out forwards
+    &.slideout
+      display: flex
+      animation: slide-out 600ms ease-in-out forwards
+  
+  &__hamburger
+    cursor: pointer
+    width: 3rem
+    @media screen and (min-width: 768px)
+      display: none
+    &:before,
+    &:after,
+    & div
+      background: $col-white
+      content: ''
+      display: block
+      height: 0.2rem
+      margin: 0.5rem 0
+      transition: $transition
+    &.open::before
+      transform: translateY(1rem) rotate(135deg)
+    &.open::after
+      transform: translateY(-0.4rem) rotate(-135deg)
+    &.open div
+      transform: scale(0)
+
+  &__cta
+    color: $col-white
+    display: flex
+    align-items: center
+    margin-left: auto
+    column-gap: 2rem
+    font-size: 1.4rem
+    @media screen and (max-width: 767px)
+      color: $col-headings
+      gap: 1.5rem
+      flex-direction: column
+      margin: 2.6rem auto 0
+    & a:first-of-type
+      font-size: 1.7rem
+      font-weight: 700
+      position: relative
+      transition: $transition opacity
+      @media screen and (min-width: 768px)
+        font-family: $font-ubuntu
+        font-size: 1.6rem
+        opacity: 0.8
+      &:hover, &:hover::before
+        opacity: 1
+      &::before
+        @media screen and (min-width: 768px)
+          background-color: $col-white
+          content: ''
+          opacity: 0
+          position: absolute
+          bottom: 0.1rem
+          height: 0.1rem
+          width: 100%
+          transition: $transition
+
+.dropdown
+  display: inline-block
+  cursor: pointer
+  position: relative
+  &:nth-of-type(2)
+    @media screen and (min-width: 768px)
+      margin: 0 4.8rem
+  &:nth-of-type(3)
+    @media screen and (max-width: 767px)
+      border-bottom: 1px solid $col-dropdown-bg
+      padding-bottom: 2.6rem
+  &:hover
+    & .dropdown__content
+      padding: 2rem 0
+      max-height: 30rem
+      @media screen and (min-width: 768px)
+    & .dropdown__title
+      color: $col-dropdown-text
+      @media screen and (min-width: 768px)
+        color: $col-white
+        opacity: 1
+      &::before
+        opacity: 1
+    & .arrow
+      transform: rotate(180deg)
+      
+  &__title
+    background-color: transparent
+    border: none
+    color: $col-headings
+    cursor: pointer
+    font-size: 1.7rem
+    font-weight: 700
+    padding: 1.2rem 0
+    position: relative
+    margin: 0 auto
+    @media screen and (min-width: 768px)
+      color: $col-white
+      font-family: $font-ubuntu
+      font-size: 1.6rem
+      padding: 0
+      opacity: 0.8
+    &::before
+      @media screen and (min-width: 768px)
+        background-color: $col-white
+        content: ''
+        opacity: 0
+        position: absolute
+        bottom: 0.1rem
+        height: 0.1rem
+        width: 100%
+        transition: $transition
+   
+  &__content
+    background-color: $col-dropdown-bg
+    border-radius: 0.5rem
+    overflow: hidden
+    max-height: 0
+    z-index: 1
+    transition: 350ms ease-in-out
+    @media screen and (min-width: 768px)
+      background-color: $col-white
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+      position: absolute
+      top: 4rem
+      left: -2rem
+      min-width: 160px
+    & li
+      display: block
+      font-size: 1.5rem
+      @media screen and (min-width: 768px)
+        margin-left: 2rem
+      &:not(:last-of-type)
+        margin-bottom: 1.7rem
+      & a
+        color: $col-dropdown-text
+        transition: $transition opacity
+        &:hover
+          opacity: 0.8
+        @media screen and (min-width: 768px)
+          font-weight: 300
+          &:hover
+            opacity: 1
+            font-weight: 600
